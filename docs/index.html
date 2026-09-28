@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="建築英文口說練習：聽、讀、錄、比較，再交錄音批改。">
+  <title>English Studio · 建築英文練習</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%231d4b79'/%3E%3Cpath d='M14 44V20h35M14 32h23M37 20v24M37 44h13' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">E</span><span>English Studio</span></div>
+      <span class="top-note">建築英文 · 口音 · Presentation</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">今日練習</h1>
+          <p>揀一段，聽清楚，錄兩次。我會按你交嚟嘅錄音逐句糾正。</p>
+        </div>
+        <div class="workflow" aria-label="練習步驟"><span>聽</span><b>→</b><span>讀</span><b>→</b><span>錄</span><b>→</b><span>改</span></div>
+      </section>
+
+      <div class="workspace">
+        <aside class="lesson-nav" aria-labelledby="lesson-heading">
+          <h2 id="lesson-heading">練習內容</h2>
+          <div class="lesson-list" id="lesson-list"></div>
+          <div class="reference-note">
+            <h3>你鍾意嘅聲音</h3>
+            <p>用沉穩、清楚嘅英式節奏做目標。系統示範聲只供聽字音，正式參考聽返原片。</p>
+            <a href="https://www.rthk.hk/radio/radio1/programme/unclesiu_special" target="_blank" rel="noopener noreferrer">港台 · 蕭叔叔節目 <span aria-hidden="true">↗</span></a>
+          </div>
+        </aside>
+
+        <section class="lesson-panel" aria-live="polite">
+          <div class="lesson-heading-row">
+            <div><p class="lesson-type" id="lesson-type"></p><h2 id="lesson-title"></h2></div>
+            <span class="lesson-duration" id="lesson-duration"></span>
+          </div>
+          <p class="lesson-context" id="lesson-context"></p>
+          <div class="script-box">
+            <div class="script-topline"><span>跟讀稿</span><span class="script-hint">每句之間停一停</span></div>
+            <div class="script-text" id="script-text"></div>
+          </div>
+          <p class="focus-line"><strong>今次重點</strong><span id="focus-text"></span></p>
+          <div class="reference-actions">
+            <button type="button" class="button button-secondary" id="speak-button">播放英式示範</button>
+            <a id="reference-link" class="text-link" target="_blank" rel="noopener noreferrer">睇原片／字典 <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="voice-note" id="voice-note">示範使用你裝置嘅英式系統語音，唔係蕭叔叔或 Dan Stevens 嘅聲線。</p>
+        </section>
+
+        <section class="record-panel" aria-labelledby="record-heading">
+          <div class="record-heading-row"><div><p class="lesson-type">練習錄音</p><h2 id="record-heading">錄兩次，聽出分別</h2></div><span id="mic-indicator" class="mic-indicator">未啟動咪高峰</span></div>
+          <p class="record-intro">每次讀同一段。讀完按停止，先聽第一版，再試第二版。</p>
+          <div class="record-controls">
+            <button type="button" class="button button-primary" id="record-button">開始錄音</button>
+            <label for="take-select">存為</label>
+            <select id="take-select" aria-label="選擇錄音版本"><option value="1">第 1 次</option><option value="2">第 2 次</option></select>
+            <span id="record-timer" class="timer" aria-live="off">00:00</span>
+          </div>
+          <p class="status" id="record-status" role="status">錄音只儲存在呢部裝置嘅瀏覽器，唔會喺手機同電腦之間同步。你可以隨時下載。</p>
+          <div class="takes" id="takes"></div>
+          <div class="handoff">
+            <strong>交畀我批改</strong>
+            <p>下載錄音，附喺呢個 Codex 對話。你可以交一版，最好兩版一齊交；我會指出發音、重音、停頓，同下一次點練。</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="ted-section" aria-labelledby="ted-heading">
+        <div class="ted-heading"><h2 id="ted-heading">建築師原片</h2><p>先聽講法同故事結構，再用練習稿讀出你想要嘅英式節奏。</p></div>
+        <div class="ted-list">
+          <a href="https://www.ted.com/talks/thomas_heatherwick_building_the_seed_cathedral" target="_blank" rel="noopener noreferrer"><span class="ted-index">A</span><span><strong>Building the Seed Cathedral</strong><small>Thomas Heatherwick · 由開場介紹自己，聽到佢形容建築「soulless and cold」</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a href="https://www.ted.com/talks/ole_scheeren_why_great_architecture_should_tell_a_story" target="_blank" rel="noopener noreferrer"><span class="ted-index">B</span><span><strong>Why great architecture should tell a story</strong><small>Ole Scheeren · 留意佢點樣由建築形式講到人嘅體驗</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a href="https://www.ted.com/talks/alejandro_aravena_my_architectural_philosophy_bring_the_community_into_the_process" target="_blank" rel="noopener noreferrer"><span class="ted-index">C</span><span><strong>Bring the community into the process</strong><small>Alejandro Aravena · 留意問題、設計決定、結果嘅次序</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
